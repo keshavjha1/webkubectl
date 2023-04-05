@@ -24,6 +24,7 @@ else
     echo `kubectl config set-credentials webkubectl-user --token=${arg2}` > /dev/null 2>&1
     echo `kubectl config set-cluster kubernetes --server=${arg1}` > /dev/null 2>&1
     echo `kubectl config set-context kubernetes --cluster=kubernetes --user=webkubectl-user` > /dev/null 2>&1
+    echo `kubectl config set-context kubernetes --cluster=kubernetes --namespace=default` > /dev/null 2>&1
     echo `kubectl config use-context kubernetes` > /dev/null 2>&1
 fi
 

@@ -44,7 +44,15 @@ When session terminated, the provisioned namespace and storage are deleted.
 # Installation
 
 ```sh
+webkubectl % docker image build --platform linux/amd64 -t keskuma2/webkubectl .
+
+
 $ docker run --name="webkubectl" -p 8080:8080 -d --privileged kubeoperator/webkubectl
+
+
+$ docker run --name="kwebkubectl" -p 8080:8080 -d --privileged keskuma2/webkubectl
+
+
 ```
 
 Advanced environment variables
